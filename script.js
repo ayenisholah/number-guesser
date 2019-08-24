@@ -1,3 +1,9 @@
+// Functions
+setMessage = (msg, color) => {
+  message.style.color = color;
+  message.textContent = msg;
+}
+
 // Game variables
 let min = 1;
 let max = 10;
@@ -15,3 +21,8 @@ const message = document.querySelector('.message');
 // Assign UI Element
 minNum.textContent = min;
 maxNum.textContent = max;
+
+// Listen for guess
+guessBtn.addEventListener('click', () => {
+ 
+})
