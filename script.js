@@ -24,5 +24,22 @@ maxNum.textContent = max;
 
 // Listen for guess
 guessBtn.addEventListener('click', () => {
- 
-})
+  let guess = parseInt(guessInput.value);
+
+  // validate guess
+  if (isNaN(guess) || guess < min || guess > max) {
+    setMessage(`Please enter enter a number between ${min} and ${max}`, 'red');
+  }
+
+  // Check if won
+  if (guess === winningNum) {
+    // Disable input
+    guessInput.disabled = true;
+
+    // change input border color to green
+    guessInput.style.borderColor = 'green';
+
+    // Let user know they won
+    setMessage(`${winningNum} is , You Win`, 'green')
+  }
+});
